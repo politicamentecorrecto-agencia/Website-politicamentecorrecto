@@ -185,11 +185,11 @@ h1, h2, h3 { margin: 0; }
   border-color: rgba(255, 255, 255, 0.75);
 }
 .btn--ghost-light:hover {
-  --btn-bg: var(--azul);
-  --btn-fg: var(--blanco);
-  border-color: var(--azul);
-  transform: translateY(-2px) scale(1.04);
-  box-shadow: 0 0 0 4px rgba(52, 53, 152, 0.35), var(--shadow-md);
+  --btn-bg: var(--blanco);
+  --btn-fg: var(--tinta);
+  border-color: var(--blanco);
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.25), var(--shadow-md);
 }
 
 .btn--wa { --btn-bg: var(--verde); --btn-fg: var(--blanco); }
@@ -405,9 +405,9 @@ h1, h2, h3 { margin: 0; }
 }
 .costo__emoji {
   position: absolute;
-  top: 1.6rem;
-  right: 1.6rem;
-  font-size: 2rem;
+  top: 1.4rem;
+  right: 1.5rem;
+  font-size: 3.1rem;
   line-height: 1;
 }
 .costo__card h3 { font-size: 1.25rem; margin-bottom: 0.5rem; }
@@ -802,13 +802,14 @@ h1, h2, h3 { margin: 0; }
 .addon[data-accent="morado"]  { --accent: var(--morado); }
 .addon:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
 .addon__art {
-  width: 60px; height: 60px;
-  border-radius: 14px;
+  width: 92px; height: 92px;
+  border-radius: 20px;
   display: grid;
   place-items: center;
-  background: color-mix(in srgb, var(--accent) 14%, white);
+  background: color-mix(in srgb, var(--accent) 13%, white);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--accent) 18%, white);
 }
-.addon__art svg { width: 40px; height: 40px; }
+.addon__art svg { width: 62px; height: 62px; }
 .addon h3 { font-size: 1.1rem; line-height: 1.25; }
 .addon__desc { margin: 0; font-size: 0.92rem; color: #4a4a63; }
 .addon__price {
@@ -839,13 +840,14 @@ h1, h2, h3 { margin: 0; }
 .rule__icon {
   display: grid;
   place-items: center;
-  width: 44px; height: 44px;
-  border-radius: 12px;
-  background: var(--verde);
-  color: var(--blanco);
+  width: 50px; height: 50px;
+  border-radius: 14px;
+  background: var(--blanco);
+  box-shadow: var(--shadow-sm);
+  font-size: 1.7rem;
+  line-height: 1;
   flex: none;
 }
-.rule__icon svg { width: 22px; height: 22px; }
 .rule p { margin: 0; font-weight: 500; }
 
 /* ===== 13. CIERRE + CTA ===================================== */
@@ -890,11 +892,17 @@ h1, h2, h3 { margin: 0; }
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.1rem;
+  gap: 0.9rem;
   text-align: center;
 }
 .brand--footer .brand__text { color: var(--blanco); font-size: 1rem; }
-.footer__legal { font-size: 0.82rem; color: rgba(255, 255, 255, 0.55); margin: 0; }
+.footer__legal {
+  font-size: 0.68rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+  max-width: 46ch;
+}
 
 /* ===== 15. ANIMACIONES Y SCROLL REVEAL ====================== */
 .reveal {
@@ -931,7 +939,6 @@ h1, h2, h3 { margin: 0; }
   .escala__grid  { grid-template-columns: repeat(2, 1fr); }
   .rules         { grid-template-columns: repeat(2, 1fr); }
   .team__row     { grid-template-columns: 1fr 1fr; }
-  .footer__inner { flex-direction: row; justify-content: space-between; text-align: left; }
 }
 
 /* Nav completa desde tablet (solo móvil colapsa a menú) ≥ 768px */
