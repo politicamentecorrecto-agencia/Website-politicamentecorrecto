@@ -93,24 +93,20 @@
   }
 
   /* ---- 5. Comparador de paquetes ------------------------------- */
+  // En móvil y tablet se ve un plan a la vez y el toggle desliza el carrusel.
+  // En escritorio (CSS ≥992px) se ven los dos y el efecto es por hover.
   const toggleBtns = document.querySelectorAll("[data-plan-btn]");
-  const plans = document.querySelectorAll(".plan");
   const toggleWrap = document.querySelector(".plan-toggle");
+  const plansViewport = document.querySelector(".plans-viewport");
 
   function setActivePlan(plan) {
     if (toggleWrap) toggleWrap.setAttribute("data-active", plan);
+    if (plansViewport) plansViewport.setAttribute("data-active", plan);
 
     toggleBtns.forEach(function (btn) {
       const isActive = btn.getAttribute("data-plan-btn") === plan;
       btn.classList.toggle("is-active", isActive);
       btn.setAttribute("aria-selected", isActive ? "true" : "false");
-    });
-
-    // Resalta el plan elegido y atenúa el otro (ambos siguen visibles)
-    plans.forEach(function (card) {
-      const match = card.getAttribute("data-plan") === plan;
-      card.classList.toggle("is-focus", match);
-      card.classList.toggle("is-dim", !match);
     });
   }
 
@@ -120,8 +116,8 @@
         setActivePlan(btn.getAttribute("data-plan-btn"));
       });
     });
-    // Estado inicial: arrancamos resaltando Premium (el recomendado)
-    setActivePlan("premium");
+    // Estado inicial: empezamos en Básico (a la izquierda del carrusel)
+    setActivePlan("basico");
   }
 
   /* ---- 6. Acordeón --------------------------------------------- */

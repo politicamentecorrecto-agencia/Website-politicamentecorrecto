@@ -31,7 +31,8 @@
 <body>
 
   <!-- ============================================================= -->
-  <!-- NAV — sticky, transparente → sólida al hacer scroll            -->
+  <!-- NAV — sticky. En desktop/tablet siempre desplegada;           -->
+  <!--       solo colapsa a menú en móvil.                            -->
   <!-- ============================================================= -->
   <header class="nav" id="nav" data-nav>
     <div class="container nav__inner">
@@ -59,7 +60,7 @@
   <main>
 
     <!-- ========================================================= -->
-    <!-- 1. HERO                                                    -->
+    <!-- 1. HERO — todo centrado, fondo más opaco                   -->
     <!-- ========================================================= -->
     <section class="hero" id="inicio">
       <!-- Composición geométrica de fondo (SVG inline, paleta completa) -->
@@ -76,13 +77,12 @@
               <stop offset="1" stop-color="#F8280C" />
             </linearGradient>
           </defs>
-          <!-- Bloques de color saturado, geometría plana -->
-          <circle class="float float--slow" cx="960" cy="180" r="220" fill="url(#gradAzul)" opacity="0.9" />
-          <circle class="float float--fast" cx="1080" cy="560" r="120" fill="#03AD43" opacity="0.85" />
-          <rect class="float float--mid" x="120" y="500" width="260" height="260" rx="36"
-            fill="url(#gradNaranja)" opacity="0.9" transform="rotate(-12 250 630)" />
-          <polygon class="float float--slow" points="220,80 360,180 180,260" fill="#8F3292" opacity="0.8" />
-          <circle cx="700" cy="700" r="64" fill="#F8280C" opacity="0.75" class="float float--fast" />
+          <circle class="float float--slow" cx="980" cy="160" r="220" fill="url(#gradAzul)" opacity="0.7" />
+          <circle class="float float--fast" cx="1090" cy="560" r="120" fill="#03AD43" opacity="0.6" />
+          <rect class="float float--mid" x="90" y="500" width="260" height="260" rx="36"
+            fill="url(#gradNaranja)" opacity="0.65" transform="rotate(-12 220 630)" />
+          <polygon class="float float--slow" points="200,70 340,170 160,250" fill="#8F3292" opacity="0.6" />
+          <circle cx="680" cy="710" r="64" fill="#F8280C" opacity="0.55" class="float float--fast" />
         </svg>
       </div>
 
@@ -98,14 +98,14 @@
         </p>
         <div class="hero__cta reveal">
           <a class="btn btn--primary btn--lg" href="#contacto">Agendar reunión</a>
-          <a class="btn btn--ghost btn--lg" href="#paquetes">Ver paquetes</a>
+          <a class="btn btn--ghost-light btn--lg" href="#paquetes">Ver paquetes</a>
         </div>
         <p class="hero__seal reveal">Alta producción, proceso real.</p>
       </div>
     </section>
 
     <!-- ========================================================= -->
-    <!-- 2. EL COSTO DE COMUNICAR MAL                               -->
+    <!-- 2. EL COSTO DE COMUNICAR MAL — con emojis                  -->
     <!-- ========================================================= -->
     <section class="section section--costo" id="costo">
       <div class="container">
@@ -119,16 +119,19 @@
         <div class="costo__grid">
           <article class="costo__card reveal">
             <span class="costo__num" aria-hidden="true">01</span>
+            <span class="costo__emoji" aria-hidden="true">📉</span>
             <h3>Publicas sin ritmo.</h3>
             <p>Tu comunidad se enfría entre evento y evento.</p>
           </article>
           <article class="costo__card reveal">
             <span class="costo__num" aria-hidden="true">02</span>
+            <span class="costo__emoji" aria-hidden="true">🎬</span>
             <h3>Cubres mal los momentos clave.</h3>
             <p>Lo importante pasa y no queda registro que mueva.</p>
           </article>
           <article class="costo__card reveal">
             <span class="costo__num" aria-hidden="true">03</span>
+            <span class="costo__emoji" aria-hidden="true">🏆</span>
             <h3>Tu rival se ve más serio.</h3>
             <p>A igualdad de ideas, gana quien comunica mejor.</p>
           </article>
@@ -137,48 +140,52 @@
     </section>
 
     <!-- ========================================================= -->
-    <!-- 3. QUIÉNES SOMOS                                           -->
+    <!-- 3. QUIÉNES SOMOS — Vanessa lidera; David y Sebastián abajo -->
     <!-- ========================================================= -->
     <section class="section section--equipo" id="equipo">
-      <div class="container equipo__layout">
-        <div class="equipo__intro">
+      <div class="container">
+        <header class="section__head section__head--center">
           <span class="kicker kicker--azul reveal">Quiénes somos</span>
           <h2 class="section__title reveal">Un equipo de producción,<br />no un freelance suelto.</h2>
           <p class="equipo__seal reveal">Alta producción, proceso real.</p>
-          <p class="equipo__text reveal">
+          <p class="section__lead reveal">
             Equipo dedicado a estrategia, producción audiovisual y gestión de redes
             para proyectos políticos con causa.
           </p>
-        </div>
+        </header>
 
-        <ul class="equipo__team reveal" aria-label="Equipo">
-          <li class="member">
-            <span class="member__avatar" data-color="azul" aria-hidden="true">DS</span>
-            <div class="member__meta">
-              <strong>David Seiko</strong>
-              <span>Editor audiovisual · Web developer · IA strategist</span>
-            </div>
-          </li>
-          <li class="member">
-            <span class="member__avatar" data-color="morado" aria-hidden="true">VC</span>
-            <div class="member__meta">
-              <strong>Vanessa Cárdenas</strong>
-              <span>Community manager · Estratega en marketing digital</span>
-            </div>
-          </li>
-          <li class="member">
-            <span class="member__avatar" data-color="naranja" aria-hidden="true">SP</span>
-            <div class="member__meta">
-              <strong>Sebastián Prieto</strong>
-              <span>Filmmaker · Editor audiovisual principal</span>
-            </div>
-          </li>
-        </ul>
+        <div class="team">
+          <!-- Líder de la propuesta -->
+          <article class="team__card team__card--lead reveal">
+            <span class="team__badge">Lidera la propuesta</span>
+            <span class="team__photo team__photo--vanessa">
+              <img src="assets/img/Vannessa.jpeg" alt="Retrato de Vanessa Cárdenas" loading="lazy" />
+            </span>
+            <strong class="team__name">Vanessa Cárdenas</strong>
+            <span class="team__role">Community manager · Estratega en marketing digital</span>
+          </article>
+
+          <!-- David (izquierda) · Sebastián (derecha) -->
+          <div class="team__row">
+            <article class="team__card reveal">
+              <span class="team__photo team__photo--david">
+                <img src="assets/img/david-retrato.jpg" alt="Retrato de David Seiko" loading="lazy" />
+              </span>
+              <strong class="team__name">David Seiko</strong>
+              <span class="team__role">Editor audiovisual · Web developer · IA strategist</span>
+            </article>
+            <article class="team__card reveal">
+              <span class="team__photo team__photo--mono" data-color="naranja" aria-hidden="true">SP</span>
+              <strong class="team__name">Sebastián Prieto</strong>
+              <span class="team__role">Filmmaker · Editor audiovisual principal</span>
+            </article>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- ========================================================= -->
-    <!-- 4. QUÉ LOGRAMOS                                            -->
+    <!-- 4. QUÉ LOGRAMOS — beneficios concretos (no genéricos)      -->
     <!-- ========================================================= -->
     <section class="section section--logramos" id="logramos">
       <div class="container">
@@ -191,144 +198,180 @@
           <article class="gain reveal" data-accent="naranja">
             <span class="gain__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round"><path d="M4 18V8m5 10V4m5 14v-7m5 7V9" /></svg>
+                stroke-linecap="round" stroke-linejoin="round"><path d="M3 21v-2a4 4 0 0 1 4-4h4M21 21l-3-3m1.5-3a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0Z" /><circle cx="9" cy="7" r="4" /></svg>
             </span>
-            <h3>Presencia constante</h3>
-            <p>Apareces con ritmo, no a tirones.</p>
+            <h3>Primero en tu territorio</h3>
+            <p>Cuando se habla de la zona, apareces tú. No tu rival.</p>
           </article>
           <article class="gain reveal" data-accent="morado">
             <span class="gain__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" /></svg>
+                stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" /><path d="m9 12 2 2 4-4" /></svg>
             </span>
-            <h3>Reputación gestionada</h3>
-            <p>Cuidamos cómo te perciben, no solo qué publicas.</p>
+            <h3>Tú marcas la narrativa</h3>
+            <p>Ponemos el tema y respondemos los ataques antes de que crezcan.</p>
           </article>
           <article class="gain reveal" data-accent="rojo">
             <span class="gain__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                 stroke-linecap="round" stroke-linejoin="round"><path d="M23 7l-7 5 7 5V7Z" /><rect x="1" y="5" width="15" height="14" rx="2" /></svg>
             </span>
-            <h3>Momentos clave capturados</h3>
-            <p>Cubrimos lo que importa, listo para mover.</p>
+            <h3>Cada acto se vuelve contenido</h3>
+            <p>Una marcha, una entrega, un discurso: sale editado y listo para circular.</p>
           </article>
           <article class="gain reveal" data-accent="azul">
             <span class="gain__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                 stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.5 6.5L21 9l-5 4.5L17.5 21 12 17l-5.5 4L8 13.5 3 9l6.5-.5L12 2Z" /></svg>
             </span>
-            <h3>Imagen a la altura</h3>
-            <p>Te ves tan serio como tu propuesta.</p>
+            <h3>Cara de quien va ganando</h3>
+            <p>Te ves vigente y respaldado. La gente se suma al que proyecta fuerza.</p>
           </article>
         </div>
       </div>
     </section>
 
     <!-- ========================================================= -->
-    <!-- 5. PAQUETES — sección central, mayor peso visual           -->
+    <!-- 5. PAQUETES — encabezado + comparador deslizante           -->
     <!-- ========================================================= -->
     <section class="section section--paquetes" id="paquetes">
       <div class="container">
-        <header class="section__head section__head--center">
-          <span class="kicker kicker--naranja reveal">Paquetes</span>
-          <h2 class="section__title reveal">Elige el nivel de presencia.</h2>
-          <p class="section__lead reveal">Dos niveles, un mismo estándar de producción. Empieza donde estés; sube cuando lo necesites.</p>
+
+        <!-- Encabezado / banner de la sección -->
+        <header class="paq-banner reveal">
+          <div class="paq-banner__content">
+            <span class="kicker kicker--naranja">Paquetes</span>
+            <h2 class="paq-banner__title">Elige el nivel de presencia.</h2>
+            <p class="paq-banner__lead">
+              Dos niveles, un mismo estándar de producción. Empieza donde estés;
+              sube cuando lo necesites.
+            </p>
+          </div>
+          <!-- "Imagen" del encabezado (ilustración vectorial; sustituible por arte IA) -->
+          <div class="paq-banner__art" aria-hidden="true">
+            <svg viewBox="0 0 400 260" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="pbA" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#FEAE33" /><stop offset="1" stop-color="#F8280C" />
+                </linearGradient>
+              </defs>
+              <circle cx="320" cy="70" r="86" fill="url(#pbA)" opacity="0.9" />
+              <rect x="40" y="120" width="120" height="120" rx="22" fill="#03AD43" opacity="0.85" transform="rotate(-10 100 180)" />
+              <circle cx="150" cy="60" r="42" fill="#8F3292" opacity="0.9" />
+              <rect x="230" y="160" width="150" height="74" rx="16" fill="#fff" opacity="0.16" />
+              <polygon points="190,210 250,120 250,210" fill="#FEAE33" opacity="0.9" />
+            </svg>
+          </div>
         </header>
 
-        <!-- Toggle interactivo Básico / Premium -->
-        <div class="plan-toggle reveal" role="tablist" aria-label="Selecciona un plan">
-          <span class="plan-toggle__pill" data-toggle-pill aria-hidden="true"></span>
+        <!-- Toggle Básico / Premium (controla el deslizamiento en móvil y tablet) -->
+        <div class="plan-toggle reveal" data-active="basico" role="tablist" aria-label="Selecciona un plan">
+          <span class="plan-toggle__pill" aria-hidden="true"></span>
           <button class="plan-toggle__btn is-active" role="tab" aria-selected="true"
             data-plan-btn="basico" id="tab-basico" aria-controls="panel-basico">Básico</button>
           <button class="plan-toggle__btn" role="tab" aria-selected="false"
             data-plan-btn="premium" id="tab-premium" aria-controls="panel-premium">Premium</button>
         </div>
 
-        <div class="plans">
-          <!-- PLAN BÁSICO -->
-          <article class="plan" data-plan="basico" id="panel-basico" role="tabpanel"
-            aria-labelledby="tab-basico" tabindex="0">
-            <div class="plan__top">
-              <h3 class="plan__name">Plan Básico</h3>
-              <p class="plan__tagline">La base para no desaparecer entre eventos.</p>
-              <p class="plan__price"><span class="plan__amount">$4.000.000</span><span class="plan__period">/ mes</span></p>
-            </div>
-            <ul class="plan__features">
-              <li>Estrategia de contenidos</li>
-              <li>Gestión de redes + acompañamiento de reputación</li>
-              <li>Cubrimiento de eventos importantes <em>(sin dron)</em></li>
-              <li><strong>10</strong> reels/mes (video + copy)</li>
-              <li>Paquete de <strong>30</strong> historias</li>
-              <li><strong>5</strong> carruseles/mes (máx. 10 láminas)</li>
-              <li>Álbum fotográfico para prensa <em>(a convenir)</em></li>
-              <li><strong>3</strong> publicaciones en caliente por tendencia/noticia</li>
-              <li>Informe de resultados</li>
-            </ul>
-            <a class="btn btn--ghost btn--block" href="#contacto">Empezar con Básico</a>
-          </article>
+        <!-- Viewport: en móvil/tablet muestra uno a la vez y se desliza;
+             en escritorio muestra los dos con efecto hover. -->
+        <div class="plans-viewport" data-active="basico">
+          <div class="plans-track">
 
-          <!-- PLAN PREMIUM — destacado -->
-          <article class="plan plan--premium" data-plan="premium" id="panel-premium" role="tabpanel"
-            aria-labelledby="tab-premium" tabindex="0">
-            <span class="plan__badge">Recomendado</span>
-            <div class="plan__top">
-              <h3 class="plan__name">Plan Premium</h3>
-              <p class="plan__tagline">Producción seria, todos los días que importan.</p>
-              <p class="plan__price"><span class="plan__amount">$6.000.000</span><span class="plan__period">/ mes</span></p>
-            </div>
+            <!-- PLAN BÁSICO -->
+            <article class="plan" data-plan="basico" id="panel-basico" role="tabpanel"
+              aria-labelledby="tab-basico" tabindex="0">
+              <div class="plan__top">
+                <h3 class="plan__name">Plan Básico</h3>
+                <p class="plan__tagline">La base para no desaparecer entre eventos.</p>
+                <p class="plan__price"><span class="plan__amount">$4.000.000</span><span class="plan__period">/ mes</span></p>
+              </div>
+              <ul class="plan__features">
+                <li>Estrategia de contenidos</li>
+                <li>Gestión de redes + acompañamiento de reputación</li>
+                <li>Cubrimiento de eventos importantes <em>(sin dron)</em></li>
+                <li><strong>10</strong> reels/mes (video + copy)</li>
+                <li>Paquete de <strong>30</strong> historias</li>
+                <li><strong>5</strong> carruseles/mes (máx. 10 láminas)</li>
+                <li>Álbum fotográfico para prensa <em>(a convenir)</em></li>
+                <li><strong>3</strong> publicaciones en caliente por tendencia/noticia</li>
+                <li>Informe de resultados</li>
+              </ul>
+              <a class="btn btn--ghost btn--block" href="#contacto">Empezar con Básico</a>
+            </article>
 
-            <p class="plan__include">Todo lo del Básico, y además:</p>
-            <ul class="plan__features">
-              <li>Cubrimiento <strong>PREMIUM</strong> de eventos</li>
-              <li><strong>20</strong> reels/mes (video + copy)</li>
-              <li>Paquete de <strong>40</strong> historias</li>
-              <li><strong>8</strong> carruseles/mes (máx. 10 láminas)</li>
-              <li><strong>6</strong> publicaciones en caliente premium</li>
-            </ul>
-            <a class="btn btn--primary btn--block" href="#contacto">Quiero Premium</a>
-          </article>
+            <!-- PLAN PREMIUM — destacado -->
+            <article class="plan plan--premium" data-plan="premium" id="panel-premium" role="tabpanel"
+              aria-labelledby="tab-premium" tabindex="0">
+              <span class="plan__badge">Recomendado</span>
+              <div class="plan__top">
+                <h3 class="plan__name">Plan Premium</h3>
+                <p class="plan__tagline">Producción seria, todos los días que importan.</p>
+                <p class="plan__price"><span class="plan__amount">$6.000.000</span><span class="plan__period">/ mes</span></p>
+              </div>
+
+              <p class="plan__include">Todo lo del Básico, y además:</p>
+              <ul class="plan__features">
+                <li>Cubrimiento <strong>PREMIUM</strong> de eventos</li>
+                <li><strong>20</strong> reels/mes (video + copy)</li>
+                <li>Paquete de <strong>40</strong> historias</li>
+                <li><strong>8</strong> carruseles/mes (máx. 10 láminas)</li>
+                <li><strong>6</strong> publicaciones en caliente premium</li>
+              </ul>
+              <a class="btn btn--primary btn--block" href="#contacto">Quiero Premium</a>
+            </article>
+
+          </div>
         </div>
       </div>
     </section>
 
     <!-- ========================================================= -->
-    <!-- 6. POR QUÉ CUESTA LO QUE CUESTA — acordeón                 -->
+    <!-- 6. POR QUÉ CUESTA — manejo de objeciones (acordeón)        -->
     <!-- ========================================================= -->
     <section class="section section--porque" id="porque">
       <div class="container porque__layout">
         <header class="section__head porque__head">
           <span class="kicker kicker--morado reveal">Por qué cuesta lo que cuesta</span>
           <h2 class="section__title reveal">No pagas por reels.<br /><span class="hl-morado">Pagas por no improvisar tu imagen.</span></h2>
+          <p class="section__lead reveal">Lo que casi siempre nos preguntan, respondido sin rodeos.</p>
         </header>
 
         <div class="accordion reveal" data-accordion>
           <div class="accordion__item is-open">
             <button class="accordion__trigger" aria-expanded="true">
-              <span>Estrategia</span>
+              <span>«Me sale más barato un freelance.»</span>
               <span class="accordion__sign" aria-hidden="true"></span>
             </button>
-            <div class="accordion__panel"><p>Plan de contenido, no publicar por publicar.</p></div>
+            <div class="accordion__panel"><p>Un freelance cubre un evento. Un equipo sostiene una campaña entera. Lo barato se nota el día que importa.</p></div>
           </div>
           <div class="accordion__item">
             <button class="accordion__trigger" aria-expanded="false">
-              <span>Producción real</span>
+              <span>«Yo mismo grabo con el celular.»</span>
               <span class="accordion__sign" aria-hidden="true"></span>
             </button>
-            <div class="accordion__panel"><p>Equipo, edición y cubrimiento, no un celular y suerte.</p></div>
+            <div class="accordion__panel"><p>Grabar es fácil; que mueva votos, no. La diferencia está en el criterio y la edición, no en la cámara.</p></div>
           </div>
           <div class="accordion__item">
             <button class="accordion__trigger" aria-expanded="false">
-              <span>Gestión de reputación</span>
+              <span>«Ya tengo quien me publica.»</span>
               <span class="accordion__sign" aria-hidden="true"></span>
             </button>
-            <div class="accordion__panel"><p>Alguien cuidando cómo te leen, todos los días.</p></div>
+            <div class="accordion__panel"><p>Publicar no es estrategia. Decidimos qué, cuándo y por qué, y cuidamos cómo te leen todos los días.</p></div>
           </div>
           <div class="accordion__item">
             <button class="accordion__trigger" aria-expanded="false">
-              <span>El costo de no hacerlo</span>
+              <span>«¿Y si no veo resultados?»</span>
               <span class="accordion__sign" aria-hidden="true"></span>
             </button>
-            <div class="accordion__panel"><p>Un mes mal comunicado no se recupera en campaña.</p></div>
+            <div class="accordion__panel"><p>Medimos cada mes: ritmo, alcance y percepción. Te entregamos datos, no promesas.</p></div>
+          </div>
+          <div class="accordion__item">
+            <button class="accordion__trigger" aria-expanded="false">
+              <span>«¿Por qué mensual y no por pieza?»</span>
+              <span class="accordion__sign" aria-hidden="true"></span>
+            </button>
+            <div class="accordion__panel"><p>Una campaña no se gana con piezas sueltas, sino con presencia sostenida. Un mes mal comunicado no se recupera.</p></div>
           </div>
         </div>
       </div>
@@ -337,7 +380,7 @@
     </section>
 
     <!-- ========================================================= -->
-    <!-- 7. ESCALA CUANDO LO NECESITES — upsell                     -->
+    <!-- 7. ESCALA CUANDO LO NECESITES — 6 servicios con detalle    -->
     <!-- ========================================================= -->
     <section class="section section--escala" id="escala">
       <div class="container">
@@ -347,11 +390,60 @@
         </header>
 
         <div class="escala__grid">
-          <article class="addon reveal"><h3>Línea gráfica y brief de marca</h3><span class="addon__price">A cotizar según proyecto</span></article>
-          <article class="addon reveal"><h3>Video largo horizontal para eventos</h3><span class="addon__price">A cotizar según proyecto</span></article>
-          <article class="addon reveal"><h3>Merch</h3><span class="addon__price">A cotizar según proyecto</span></article>
-          <article class="addon reveal"><h3>Landing page</h3><span class="addon__price">A cotizar según proyecto</span></article>
-          <article class="addon reveal"><h3>Capacitación y asesoría de imagen</h3><span class="addon__price">A cotizar según proyecto</span></article>
+          <article class="addon reveal" data-accent="morado">
+            <span class="addon__art" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none"><rect x="6" y="6" width="22" height="22" rx="4" fill="#8F3292"/><circle cx="32" cy="20" r="11" fill="#FEAE33"/><rect x="18" y="28" width="22" height="14" rx="4" fill="#03AD43"/></svg>
+            </span>
+            <h3>Línea gráfica y brief de marca</h3>
+            <p class="addon__desc">Identidad visual coherente: colores, tipografías y plantillas para que todo se vea tuyo.</p>
+            <span class="addon__price">A cotizar según proyecto</span>
+          </article>
+
+          <article class="addon reveal" data-accent="rojo">
+            <span class="addon__art" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none"><rect x="5" y="12" width="30" height="24" rx="4" fill="#343598"/><path d="M35 20l8-5v18l-8-5z" fill="#F8280C"/><path d="M16 19l8 5-8 5z" fill="#fff"/></svg>
+            </span>
+            <h3>Video largo horizontal para eventos</h3>
+            <p class="addon__desc">Resúmenes y documentales cortos de tus actos, listos para YouTube y pantallas.</p>
+            <span class="addon__price">A cotizar según proyecto</span>
+          </article>
+
+          <article class="addon reveal" data-accent="naranja">
+            <span class="addon__art" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none"><path d="M16 8l8 5 8-5 8 6-6 6v17H14V25l-6-6z" fill="#FEAE33"/><circle cx="24" cy="26" r="5" fill="#343598"/></svg>
+            </span>
+            <h3>Merch</h3>
+            <p class="addon__desc">Camisetas, gorras y material de calle que tu gente quiere usar y mostrar.</p>
+            <span class="addon__price">A cotizar según proyecto</span>
+          </article>
+
+          <article class="addon reveal" data-accent="azul">
+            <span class="addon__art" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none"><rect x="6" y="8" width="36" height="28" rx="4" fill="#343598"/><rect x="6" y="8" width="36" height="8" rx="4" fill="#8F3292"/><rect x="11" y="21" width="26" height="4" rx="2" fill="#fff"/><rect x="11" y="28" width="16" height="4" rx="2" fill="#FEAE33"/></svg>
+            </span>
+            <h3>Landing page</h3>
+            <p class="addon__desc">Una página propia para recoger datos, donaciones o voluntarios.</p>
+            <span class="addon__price">A cotizar según proyecto</span>
+          </article>
+
+          <article class="addon reveal" data-accent="verde">
+            <span class="addon__art" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="16" r="8" fill="#03AD43"/><path d="M10 40c0-8 6-13 14-13s14 5 14 13z" fill="#343598"/><rect x="30" y="6" width="12" height="9" rx="2" fill="#FEAE33"/></svg>
+            </span>
+            <h3>Capacitación y asesoría de imagen</h3>
+            <p class="addon__desc">Te preparamos para cámara, entrevistas y vivos sin titubear.</p>
+            <span class="addon__price">A cotizar según proyecto</span>
+          </article>
+
+          <!-- 6.º servicio sugerido: pauta digital (alto valor en campaña) -->
+          <article class="addon reveal" data-accent="rojo">
+            <span class="addon__art" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="16" fill="#F8280C"/><circle cx="24" cy="24" r="10" fill="#fff"/><circle cx="24" cy="24" r="5" fill="#343598"/><path d="M24 4v6M24 38v6M4 24h6M38 24h6" stroke="#FEAE33" stroke-width="3" stroke-linecap="round"/></svg>
+            </span>
+            <h3>Pauta y segmentación digital</h3>
+            <p class="addon__desc">Tu mensaje llega a la gente correcta: por barrio, edad e interés. Inversión que sí mueve.</p>
+            <span class="addon__price">A cotizar según proyecto</span>
+          </article>
         </div>
       </div>
     </section>
@@ -414,7 +506,7 @@
     </section>
 
     <!-- ========================================================= -->
-    <!-- 9. CIERRE + CTA ÚNICO                                      -->
+    <!-- 9. CIERRE + CTA ÚNICO (solo WhatsApp)                      -->
     <!-- ========================================================= -->
     <section class="section section--cierre" id="contacto">
       <div class="cierre__bg" aria-hidden="true"></div>
@@ -428,7 +520,6 @@
             <svg class="btn__ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15l-1.4 5 5.1-1.3A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20Zm4.5-5.9c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.2-.4.2-.4.6-1.2a.5.5 0 0 0 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.7 11.7 0 0 0 4.5 4c2 .8 2 .5 2.4.5a2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .2-1.2c-.1-.1-.3-.2-.5-.3Z" /></svg>
             Escríbenos por WhatsApp
           </a>
-          <a class="btn btn--ghost-light btn--lg" href="#" data-calendly target="_blank" rel="noopener">Agendar en calendario</a>
         </div>
         <p class="cierre__seal reveal">Alta producción, proceso real.</p>
       </div>
@@ -437,7 +528,7 @@
   </main>
 
   <!-- ============================================================= -->
-  <!-- FOOTER                                                        -->
+  <!-- FOOTER — solo logo + derechos                                 -->
   <!-- ============================================================= -->
   <footer class="footer">
     <div class="container footer__inner">
@@ -445,14 +536,7 @@
         <span class="brand__mark" aria-hidden="true">PC</span>
         <span class="brand__text">Políticamente Correcto</span>
       </a>
-
-      <nav class="footer__social" aria-label="Redes sociales">
-        <a href="#" aria-label="Instagram" rel="noopener">Instagram</a>
-        <a href="#" aria-label="TikTok" rel="noopener">TikTok</a>
-        <a href="#" aria-label="YouTube" rel="noopener">YouTube</a>
-      </nav>
-
-      <p class="footer__legal">© <span data-year>2026</span> Políticamente Correcto · Comunicación política con propósito.</p>
+      <p class="footer__legal">© <span data-year>2026</span> Políticamente Correcto · Comunicación política con propósito. Todos los derechos reservados.</p>
     </div>
   </footer>
 
