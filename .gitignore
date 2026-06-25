@@ -1,0 +1,12 @@
+# Configuración local de Claude / editores
+.claude/
+.vscode/
+.idea/
+.DS_Store
+
+# Vercel
+.vercel
+
+# Logs y temporales
+*.log
+node_modules/

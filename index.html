@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#343598" />
+
+  <title>Políticamente Correcto · Comunicación política con propósito</title>
+  <meta name="description"
+    content="Producimos la presencia digital de quienes mueven a su comunidad. Estrategia, contenido y reputación, en un solo equipo. Alta producción, proceso real." />
+
+  <!-- Favicon vectorial -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <!-- Open Graph básico para el link de respaldo -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Políticamente Correcto · Comunicación política con propósito" />
+  <meta property="og:description" content="Alta producción, proceso real. Estrategia, contenido y reputación para quienes mueven a su comunidad." />
+
+  <!-- Google Fonts: Anton (display) + Inter (cuerpo) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+
+  <!-- ============================================================= -->
+  <!-- NAV — sticky, transparente → sólida al hacer scroll            -->
+  <!-- ============================================================= -->
+  <header class="nav" id="nav" data-nav>
+    <div class="container nav__inner">
+      <a class="brand" href="#inicio" aria-label="Políticamente Correcto, inicio">
+        <span class="brand__mark" aria-hidden="true">PC</span>
+        <span class="brand__text">Políticamente<br />Correcto</span>
+      </a>
+
+      <nav class="nav__links" aria-label="Navegación principal" id="navMenu">
+        <a href="#logramos">Servicios</a>
+        <a href="#paquetes">Paquetes</a>
+        <a href="#equipo">Equipo</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <a class="btn btn--primary nav__cta" href="#contacto">Agendar reunión</a>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Abrir menú"
+        aria-expanded="false" aria-controls="navMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ========================================================= -->
+    <!-- 1. HERO                                                    -->
+    <!-- ========================================================= -->
+    <section class="hero" id="inicio">
+      <!-- Composición geométrica de fondo (SVG inline, paleta completa) -->
+      <div class="hero__bg" aria-hidden="true">
+        <svg class="hero__svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice"
+          xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="gradAzul" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#343598" />
+              <stop offset="1" stop-color="#8F3292" />
+            </linearGradient>
+            <linearGradient id="gradNaranja" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#FEAE33" />
+              <stop offset="1" stop-color="#F8280C" />
+            </linearGradient>
+          </defs>
+          <!-- Bloques de color saturado, geometría plana -->
+          <circle class="float float--slow" cx="960" cy="180" r="220" fill="url(#gradAzul)" opacity="0.9" />
+          <circle class="float float--fast" cx="1080" cy="560" r="120" fill="#03AD43" opacity="0.85" />
+          <rect class="float float--mid" x="120" y="500" width="260" height="260" rx="36"
+            fill="url(#gradNaranja)" opacity="0.9" transform="rotate(-12 250 630)" />
+          <polygon class="float float--slow" points="220,80 360,180 180,260" fill="#8F3292" opacity="0.8" />
+          <circle cx="700" cy="700" r="64" fill="#F8280C" opacity="0.75" class="float float--fast" />
+        </svg>
+      </div>
+
+      <div class="container hero__inner">
+        <p class="eyebrow reveal">Comunicación política con propósito</p>
+        <h1 class="hero__title reveal">
+          Tu mensaje conecta.<br />
+          <span class="hl">Tu comunicación todavía no está a la altura.</span>
+        </h1>
+        <p class="hero__sub reveal">
+          Producimos la presencia digital de quienes mueven a su comunidad.
+          Estrategia, contenido y reputación, en un solo equipo.
+        </p>
+        <div class="hero__cta reveal">
+          <a class="btn btn--primary btn--lg" href="#contacto">Agendar reunión</a>
+          <a class="btn btn--ghost btn--lg" href="#paquetes">Ver paquetes</a>
+        </div>
+        <p class="hero__seal reveal">Alta producción, proceso real.</p>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- 2. EL COSTO DE COMUNICAR MAL                               -->
+    <!-- ========================================================= -->
+    <section class="section section--costo" id="costo">
+      <div class="container">
+        <header class="section__head">
+          <span class="kicker kicker--rojo reveal">El costo de comunicar mal</span>
+          <h2 class="section__title reveal">
+            No pierdes apoyo por tus ideas.<br /><span class="hl-rojo">Lo pierdes por cómo se ven.</span>
+          </h2>
+        </header>
+
+        <div class="costo__grid">
+          <article class="costo__card reveal">
+            <span class="costo__num" aria-hidden="true">01</span>
+            <h3>Publicas sin ritmo.</h3>
+            <p>Tu comunidad se enfría entre evento y evento.</p>
+          </article>
+          <article class="costo__card reveal">
+            <span class="costo__num" aria-hidden="true">02</span>
+            <h3>Cubres mal los momentos clave.</h3>
+            <p>Lo importante pasa y no queda registro que mueva.</p>
+          </article>
+          <article class="costo__card reveal">
+            <span class="costo__num" aria-hidden="true">03</span>
+            <h3>Tu rival se ve más serio.</h3>
+            <p>A igualdad de ideas, gana quien comunica mejor.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- 3. QUIÉNES SOMOS                                           -->
+    <!-- ========================================================= -->
+    <section class="section section--equipo" id="equipo">
+      <div class="container equipo__layout">
+        <div class="equipo__intro">
+          <span class="kicker kicker--azul reveal">Quiénes somos</span>
+          <h2 class="section__title reveal">Un equipo de producción,<br />no un freelance suelto.</h2>
+          <p class="equipo__seal reveal">Alta producción, proceso real.</p>
+          <p class="equipo__text reveal">
+            Equipo dedicado a estrategia, producción audiovisual y gestión de redes
+            para proyectos políticos con causa.
+          </p>
+        </div>
+
+        <ul class="equipo__team reveal" aria-label="Equipo">
+          <li class="member">
+            <span class="member__avatar" data-color="azul" aria-hidden="true">DS</span>
+            <div class="member__meta">
+              <strong>David Seiko</strong>
+              <span>Editor audiovisual · Web developer · IA strategist</span>
+            </div>
+          </li>
+          <li class="member">
+            <span class="member__avatar" data-color="morado" aria-hidden="true">VC</span>
+            <div class="member__meta">
+              <strong>Vanessa Cárdenas</strong>
+              <span>Community manager · Estratega en marketing digital</span>
+            </div>
+          </li>
+          <li class="member">
+            <span class="member__avatar" data-color="naranja" aria-hidden="true">SP</span>
+            <div class="member__meta">
+              <strong>Sebastián Prieto</strong>
+              <span>Filmmaker · Editor audiovisual principal</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- 4. QUÉ LOGRAMOS                                            -->
+    <!-- ========================================================= -->
+    <section class="section section--logramos" id="logramos">
+      <div class="container">
+        <header class="section__head">
+          <span class="kicker kicker--verde reveal">Qué logramos</span>
+          <h2 class="section__title reveal">Lo que tu campaña gana cada mes.</h2>
+        </header>
+
+        <div class="logramos__grid">
+          <article class="gain reveal" data-accent="naranja">
+            <span class="gain__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round"><path d="M4 18V8m5 10V4m5 14v-7m5 7V9" /></svg>
+            </span>
+            <h3>Presencia constante</h3>
+            <p>Apareces con ritmo, no a tirones.</p>
+          </article>
+          <article class="gain reveal" data-accent="morado">
+            <span class="gain__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" /></svg>
+            </span>
+            <h3>Reputación gestionada</h3>
+            <p>Cuidamos cómo te perciben, no solo qué publicas.</p>
+          </article>
+          <article class="gain reveal" data-accent="rojo">
+            <span class="gain__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round"><path d="M23 7l-7 5 7 5V7Z" /><rect x="1" y="5" width="15" height="14" rx="2" /></svg>
+            </span>
+            <h3>Momentos clave capturados</h3>
+            <p>Cubrimos lo que importa, listo para mover.</p>
+          </article>
+          <article class="gain reveal" data-accent="azul">
+            <span class="gain__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.5 6.5L21 9l-5 4.5L17.5 21 12 17l-5.5 4L8 13.5 3 9l6.5-.5L12 2Z" /></svg>
+            </span>
+            <h3>Imagen a la altura</h3>
+            <p>Te ves tan serio como tu propuesta.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- 5. PAQUETES — sección central, mayor peso visual           -->
+    <!-- ========================================================= -->
+    <section class="section section--paquetes" id="paquetes">
+      <div class="container">
+        <header class="section__head section__head--center">
+          <span class="kicker kicker--naranja reveal">Paquetes</span>
+          <h2 class="section__title reveal">Elige el nivel de presencia.</h2>
+          <p class="section__lead reveal">Dos niveles, un mismo estándar de producción. Empieza donde estés; sube cuando lo necesites.</p>
+        </header>
+
+        <!-- Toggle interactivo Básico / Premium -->
+        <div class="plan-toggle reveal" role="tablist" aria-label="Selecciona un plan">
+          <span class="plan-toggle__pill" data-toggle-pill aria-hidden="true"></span>
+          <button class="plan-toggle__btn is-active" role="tab" aria-selected="true"
+            data-plan-btn="basico" id="tab-basico" aria-controls="panel-basico">Básico</button>
+          <button class="plan-toggle__btn" role="tab" aria-selected="false"
+            data-plan-btn="premium" id="tab-premium" aria-controls="panel-premium">Premium</button>
+        </div>
+
+        <div class="plans">
+          <!-- PLAN BÁSICO -->
+          <article class="plan" data-plan="basico" id="panel-basico" role="tabpanel"
+            aria-labelledby="tab-basico" tabindex="0">
+            <div class="plan__top">
+              <h3 class="plan__name">Plan Básico</h3>
+              <p class="plan__tagline">La base para no desaparecer entre eventos.</p>
+              <p class="plan__price"><span class="plan__amount">$4.000.000</span><span class="plan__period">/ mes</span></p>
+            </div>
+            <ul class="plan__features">
+              <li>Estrategia de contenidos</li>
+              <li>Gestión de redes + acompañamiento de reputación</li>
+              <li>Cubrimiento de eventos importantes <em>(sin dron)</em></li>
+              <li><strong>10</strong> reels/mes (video + copy)</li>
+              <li>Paquete de <strong>30</strong> historias</li>
+              <li><strong>5</strong> carruseles/mes (máx. 10 láminas)</li>
+              <li>Álbum fotográfico para prensa <em>(a convenir)</em></li>
+              <li><strong>3</strong> publicaciones en caliente por tendencia/noticia</li>
+              <li>Informe de resultados</li>
+            </ul>
+            <a class="btn btn--ghost btn--block" href="#contacto">Empezar con Básico</a>
+          </article>
+
+          <!-- PLAN PREMIUM — destacado -->
+          <article class="plan plan--premium" data-plan="premium" id="panel-premium" role="tabpanel"
+            aria-labelledby="tab-premium" tabindex="0">
+            <span class="plan__badge">Recomendado</span>
+            <div class="plan__top">
+              <h3 class="plan__name">Plan Premium</h3>
+              <p class="plan__tagline">Producción seria, todos los días que importan.</p>
+              <p class="plan__price"><span class="plan__amount">$6.000.000</span><span class="plan__period">/ mes</span></p>
+            </div>
+
+            <p class="plan__include">Todo lo del Básico, y además:</p>
+            <ul class="plan__features">
+              <li>Cubrimiento <strong>PREMIUM</strong> de eventos</li>
+              <li><strong>20</strong> reels/mes (video + copy)</li>
+              <li>Paquete de <strong>40</strong> historias</li>
+              <li><strong>8</strong> carruseles/mes (máx. 10 láminas)</li>
+              <li><strong>6</strong> publicaciones en caliente premium</li>
+            </ul>
+            <a class="btn btn--primary btn--block" href="#contacto">Quiero Premium</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- 6. POR QUÉ CUESTA LO QUE CUESTA — acordeón                 -->
+    <!-- ========================================================= -->
+    <section class="section section--porque" id="porque">
+      <div class="container porque__layout">
+        <header class="section__head porque__head">
+          <span class="kicker kicker--morado reveal">Por qué cuesta lo que cuesta</span>
+          <h2 class="section__title reveal">No pagas por reels.<br /><span class="hl-morado">Pagas por no improvisar tu imagen.</span></h2>
+        </header>
+
+        <div class="accordion reveal" data-accordion>
+          <div class="accordion__item is-open">
+            <button class="accordion__trigger" aria-expanded="true">
+              <span>Estrategia</span>
+              <span class="accordion__sign" aria-hidden="true"></span>
+            </button>
+            <div class="accordion__panel"><p>Plan de contenido, no publicar por publicar.</p></div>
+          </div>
+          <div class="accordion__item">
+            <button class="accordion__trigger" aria-expanded="false">
+              <span>Producción real</span>
+              <span class="accordion__sign" aria-hidden="true"></span>
+            </button>
+            <div class="accordion__panel"><p>Equipo, edición y cubrimiento, no un celular y suerte.</p></div>
+          </div>
+          <div class="accordion__item">
+            <button class="accordion__trigger" aria-expanded="false">
+              <span>Gestión de reputación</span>
+              <span class="accordion__sign" aria-hidden="true"></span>
+            </button>
+            <div class="accordion__panel"><p>Alguien cuidando cómo te leen, todos los días.</p></div>
+          </div>
+          <div class="accordion__item">
+            <button class="accordion__trigger" aria-expanded="false">
+              <span>El costo de no hacerlo</span>
+              <span class="accordion__sign" aria-hidden="true"></span>
+            </button>
+            <div class="accordion__panel"><p>Un mes mal comunicado no se recupera en campaña.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <p class="porque__close container reveal">“Un editor barato te sale caro el día que importa.”</p>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- 7. ESCALA CUANDO LO NECESITES — upsell                     -->
+    <!-- ========================================================= -->
+    <section class="section section--escala" id="escala">
+      <div class="container">
+        <header class="section__head">
+          <span class="kicker kicker--verde reveal">Servicios adicionales</span>
+          <h2 class="section__title reveal">¿Necesitas más? Lo sumamos por proyecto.</h2>
+        </header>
+
+        <div class="escala__grid">
+          <article class="addon reveal"><h3>Línea gráfica y brief de marca</h3><span class="addon__price">A cotizar según proyecto</span></article>
+          <article class="addon reveal"><h3>Video largo horizontal para eventos</h3><span class="addon__price">A cotizar según proyecto</span></article>
+          <article class="addon reveal"><h3>Merch</h3><span class="addon__price">A cotizar según proyecto</span></article>
+          <article class="addon reveal"><h3>Landing page</h3><span class="addon__price">A cotizar según proyecto</span></article>
+          <article class="addon reveal"><h3>Capacitación y asesoría de imagen</h3><span class="addon__price">A cotizar según proyecto</span></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- 8. CÓMO TRABAJAMOS — reglas como garantías                 -->
+    <!-- ========================================================= -->
+    <section class="section section--proceso" id="proceso">
+      <div class="container">
+        <header class="section__head">
+          <span class="kicker kicker--azul reveal">Cómo trabajamos</span>
+          <h2 class="section__title reveal">Reglas claras para trabajar tranquilos.</h2>
+        </header>
+
+        <ul class="rules">
+          <li class="rule reveal">
+            <span class="rule__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4" /><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" /></svg>
+            </span>
+            <p>Reservamos tu ciclo con anticipo y nos dedicamos full a tu campaña.</p>
+          </li>
+          <li class="rule reveal">
+            <span class="rule__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><path d="M14 2v6h6M9 13h6M9 17h6" /></svg>
+            </span>
+            <p>Emitimos los soportes que tu campaña necesita para sus cuentas.</p>
+          </li>
+          <li class="rule reveal">
+            <span class="rule__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9" /><path d="M3 4v5h5" /></svg>
+            </span>
+            <p>2 rondas de ajustes por entregable.</p>
+          </li>
+          <li class="rule reveal">
+            <span class="rule__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round"><path d="M5 9l-3 3 3 3M19 9l3 3-3 3M9 5l-3 14" /></svg>
+            </span>
+            <p>Viáticos de desplazamiento se cubren aparte.</p>
+          </li>
+          <li class="rule reveal">
+            <span class="rule__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" /></svg>
+            </span>
+            <p>Entregamos material final listo para publicar (no archivos editables).</p>
+          </li>
+          <li class="rule reveal">
+            <span class="rule__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" /></svg>
+            </span>
+            <p>Guardamos tu material 60 días.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- 9. CIERRE + CTA ÚNICO                                      -->
+    <!-- ========================================================= -->
+    <section class="section section--cierre" id="contacto">
+      <div class="cierre__bg" aria-hidden="true"></div>
+      <div class="container cierre__inner">
+        <span class="kicker kicker--blanco reveal">Cierre</span>
+        <h2 class="cierre__title reveal">Tu próxima etapa empieza con una reunión.</h2>
+        <p class="cierre__text reveal">Cupos limitados por ciclo electoral. Agenda y revisamos tu caso.</p>
+
+        <div class="cierre__cta reveal">
+          <a class="btn btn--wa btn--lg" href="https://wa.me/57XXXXXXXXXX" target="_blank" rel="noopener">
+            <svg class="btn__ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15l-1.4 5 5.1-1.3A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20Zm4.5-5.9c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.2-.4.2-.4.6-1.2a.5.5 0 0 0 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.7 11.7 0 0 0 4.5 4c2 .8 2 .5 2.4.5a2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .2-1.2c-.1-.1-.3-.2-.5-.3Z" /></svg>
+            Escríbenos por WhatsApp
+          </a>
+          <a class="btn btn--ghost-light btn--lg" href="#" data-calendly target="_blank" rel="noopener">Agendar en calendario</a>
+        </div>
+        <p class="cierre__seal reveal">Alta producción, proceso real.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================= -->
+  <!-- FOOTER                                                        -->
+  <!-- ============================================================= -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a class="brand brand--footer" href="#inicio">
+        <span class="brand__mark" aria-hidden="true">PC</span>
+        <span class="brand__text">Políticamente Correcto</span>
+      </a>
+
+      <nav class="footer__social" aria-label="Redes sociales">
+        <a href="#" aria-label="Instagram" rel="noopener">Instagram</a>
+        <a href="#" aria-label="TikTok" rel="noopener">TikTok</a>
+        <a href="#" aria-label="YouTube" rel="noopener">YouTube</a>
+      </nav>
+
+      <p class="footer__legal">© <span data-year>2026</span> Políticamente Correcto · Comunicación política con propósito.</p>
+    </div>
+  </footer>
+
+  <!-- Lógica de interacción -->
+  <script src="js/main.js" defer></script>
+</body>
+</html>
