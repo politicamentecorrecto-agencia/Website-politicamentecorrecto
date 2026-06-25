@@ -479,12 +479,17 @@ h1, h2, h3 { margin: 0; }
 .team__photo img { width: 100%; height: 100%; object-fit: cover; }
 .team__photo--vanessa img { object-position: 58% 20%; }
 .team__photo--david img { object-position: 50% 18%; }
-.team__photo--mono {
-  background: var(--naranja);
-  color: var(--tinta);
-  font-family: var(--font-display);
-  font-size: 2.4rem;
-  letter-spacing: 0.02em;
+/* Sebastián: si existe assets/img/sebastian.(png|jpg) se muestra la foto;
+   si no, se ve el monograma "SP" sobre naranja. */
+.team__photo--seba {
+  background-color: var(--naranja);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover, cover, 56%;
+  background-image:
+    url("../assets/img/sebastian.png"),
+    url("../assets/img/sebastian.jpg"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Ctext x='50' y='52' font-family='Arial,Helvetica,sans-serif' font-weight='900' font-size='42' fill='%231A1A2E' text-anchor='middle' dominant-baseline='central'%3ESP%3C/text%3E%3C/svg%3E");
 }
 .team__name { font-size: 1.18rem; margin-top: 0.4rem; }
 .team__card--lead .team__name { font-size: 1.4rem; }
@@ -563,7 +568,7 @@ h1, h2, h3 { margin: 0; }
   position: relative;
   display: flex;
   align-items: center;
-  width: max-content;
+  width: min(100%, 340px);
   margin: 0 auto clamp(2rem, 5vw, 3rem);
   background: var(--blanco);
   border: 1px solid #e6e6f0;
@@ -588,17 +593,20 @@ h1, h2, h3 { margin: 0; }
 .plan-toggle__btn {
   position: relative;
   z-index: 1;
+  flex: 1 1 0;
   border: 0;
   background: none;
   cursor: pointer;
   font-family: var(--font-body);
   font-weight: 700;
   font-size: 0.98rem;
-  padding: 0.7em 1.9em;
+  padding: 0.7em 1em;
   color: var(--tinta);
   border-radius: 999px;
+  text-align: center;
   transition: color 0.2s ease;
 }
+.plan-toggle__btn .star { font-size: 0.9em; }
 .plan-toggle__btn.is-active { color: var(--blanco); }
 .plan-toggle[data-active="premium"] .plan-toggle__btn.is-active { color: var(--tinta); }
 
@@ -612,6 +620,7 @@ h1, h2, h3 { margin: 0; }
 .plans-viewport[data-active="premium"] .plans-track { transform: translateX(-100%); }
 
 .plan {
+  --plan-pad: clamp(1.8rem, 4vw, 2.6rem);
   flex: 0 0 100%;
   position: relative;
   display: flex;
@@ -619,9 +628,33 @@ h1, h2, h3 { margin: 0; }
   background: var(--blanco);
   border: 1px solid #e8e8f0;
   border-radius: var(--r-lg);
-  padding: clamp(1.8rem, 4vw, 2.6rem);
+  padding: var(--plan-pad);
   box-shadow: var(--shadow-sm);
   transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease, opacity 0.28s ease, filter 0.28s ease;
+}
+
+/* Portada superior de cada plan. La imagen real se sobrepone al degradado;
+   si el archivo aún no existe, se ve el degradado (sin imagen rota). */
+.plan__cover {
+  height: 150px;
+  margin: calc(-1 * var(--plan-pad)) calc(-1 * var(--plan-pad)) 1.7rem;
+  border-radius: calc(var(--r-lg) - 3px) calc(var(--r-lg) - 3px) 0 0;
+  background-color: var(--azul);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.plan__cover--basico {
+  background-image:
+    url("../assets/img/plan-basico.png"),
+    url("../assets/img/plan-basico.jpg"),
+    linear-gradient(135deg, #343598, #8F3292);
+}
+.plan__cover--premium {
+  background-image:
+    url("../assets/img/plan-premium.png"),
+    url("../assets/img/plan-premium.jpg"),
+    linear-gradient(135deg, #FEAE33, #F8280C);
 }
 
 /* Premium destacado */
