@@ -963,11 +963,48 @@ h1, h2, h3 { margin: 0; }
   .btn, .plans-track { transition: background 0.18s ease, color 0.18s ease; }
 }
 
+/* ===== 15b. MÉTRICAS DE INSTAGRAM =========================== */
+/* Sección preparada: se activa al descomentar #metricas en el
+   index.html cuando el cliente envíe los pantallazos y el video. */
+.section--metricas { background: var(--crema); }
+
+.metricas__grid {
+  display: grid;
+  gap: 1.4rem;
+  grid-template-columns: 1fr;
+  align-items: stretch;
+}
+.metricas__item {
+  margin: 0;
+  border-radius: var(--r-md);
+  overflow: hidden;
+  background: var(--blanco);
+  box-shadow: var(--shadow-sm);
+}
+.metricas__item img,
+.metricas__item video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.metricas__video { position: relative; }
+.metricas__video figcaption {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 0.6rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--blanco);
+  background: linear-gradient(transparent, rgba(26, 26, 46, 0.85));
+}
+
 /* ===== 16. RESPONSIVE ======================================= */
 
 /* Tablet ≥ 640px */
 @media (min-width: 640px) {
   .costo__grid   { grid-template-columns: repeat(3, 1fr); }
+  .metricas__grid { grid-template-columns: repeat(3, 1fr); }
   .logramos__grid { grid-template-columns: repeat(2, 1fr); }
   .escala__grid  { grid-template-columns: repeat(2, 1fr); }
   .rules         { grid-template-columns: repeat(2, 1fr); }
